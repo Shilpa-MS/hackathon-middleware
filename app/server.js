@@ -44,7 +44,7 @@ app.post("/book", async (req, res) => {
   console.log(result);
   if (result.user.error || result.hospital.error || result.error)
     res.status(400).send({ statusCode: 400, message: "Could not book!!" });
-  else res.status(200).send({ statusCode: 200, message: "Booking success!" });
+  else res.status(200).send({ statusCode: 200, message: "Booking success!",result });
 });
 
 const port = process.env.PORT || 3600;
